@@ -8,6 +8,9 @@ body {
     align-items: center;
     justify-content: center;
 }
+input {
+    font-size: 1.2rem;
+}
 
 main {
     width: 30rem;
@@ -44,20 +47,22 @@ main:before {
     grid-template-columns: 5fr 2fr;
 }
 .search-section input{
-    height: 2.5rem;
+    height: 2.4rem;
     border: .5px solid #dbdbdb;
-    padding: 0;
+    padding-left: 1rem;
     border-radius:10px 0 0 10px;
-    
 }
 
 .search-section button{
-    height: 2.6rem;
+    height: 2.68rem;
     border: .5px solid #dbdbdb;
     border-radius:0 10px 10px 0;
     background-color: #3926e9;
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
-    
+}
+
+button:focus, input:focus {
+    outline: none;
 }
