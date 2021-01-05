@@ -12,10 +12,11 @@ body {
 main {
     width: 30rem;
     height: 20rem;
-    
+    font-size: 1.4rem;
+
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
-    justify-content: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 2rem;
     
     border-radius: 5px;
     position: relative;
@@ -37,4 +38,26 @@ main:before {
     box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
     filter: blur(10px);
     margin: -20px;
+}
+.search-section { 
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+.search-section input{
+    height: 2.5rem;
+    border: .5px solid #dbdbdb;
+    padding: 0;
+    border-radius:10px 0 0 10px;
+    
+}
+
+.search-section button{
+    height: 2.6rem;
+    border: .5px solid #dbdbdb;
+    border-radius:0 10px 10px 0;
+    background-color: #3926e9;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    
 }
