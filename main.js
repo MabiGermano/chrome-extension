@@ -5,16 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
         )`;
     body.style.backgroundSize = 'cover';
     body.style.backgroundAttachment = 'fixed';
-    getRadomJoke();
+    const joke = getRadomJoke();
+    updateContent(document.querySelector('.jokes-section'), joke);
 });
 
 
 function getRadomJoke() {
-    fetch('https://v2.jokeapi.dev/joke/Programming,Christmas?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart')
+    return fetch('https://v2.jokeapi.dev/joke/Programming,Christmas?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart')
         .then((res) => {
             return res.json();
         }).then((data)=> {
-            updateContent(document.querySelector('.jokes-section'), data);
+            return data;
         });
 }
 
