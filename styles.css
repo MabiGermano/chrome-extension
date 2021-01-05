@@ -15,7 +15,7 @@ input {
 main {
     width: 30rem;
     height: 20rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -42,7 +42,7 @@ main:before {
     filter: blur(10px);
     margin: -20px;
 }
-.search-section { 
+.search-section form{ 
     display: grid;
     grid-template-columns: 5fr 2fr;
 }
@@ -65,4 +65,8 @@ main:before {
 
 button:focus, input:focus {
     outline: none;
+}
+
+.joke-section {
+
 }

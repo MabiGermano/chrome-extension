@@ -5,8 +5,11 @@ document.addEventListener('DOMContentLoaded', function () {
         )`;
     body.style.backgroundSize = 'cover';
     body.style.backgroundAttachment = 'fixed';
-    const joke = getRadomJoke();
-    updateContent(document.querySelector('.jokes-section'), joke);
+
+    getRadomJoke().then(joke => {
+        updateContent(document.querySelector('.jokes-section'), joke);
+    });
+    initSearch();
 });
 
 
@@ -14,11 +17,19 @@ function getRadomJoke() {
     return fetch('https://v2.jokeapi.dev/joke/Programming,Christmas?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart')
         .then((res) => {
             return res.json();
-        }).then((data)=> {
-            return data;
         });
 }
 
 function updateContent(element, message) {
     element.innerHTML = `<p>${message.setup} <i>${message.delivery}</i></p>`
+}
+
+function initSearch() {
+    const searchFrom = document.querySelector('.search-section form');
+    searchFrom.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const input = document.querySelector('.search-section form input');
+        const text = input.value.replaceAll(' ', '+');
+        window.open(`https://www.google.com/search?q=${text}`, '_self');
+    });
 }
