@@ -1,0 +1,23 @@
+{
+    "name": "Wallpaper chome extension",
+    "version": "1.0",
+    "author": "Maria Beatriz Germano",
+    "description": "There's a pic for you!",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "topSites"
+    ],
+
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+
+    "page_action": {
+      "default_popup": "popup.html"
+    },
+
+    "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'",
+
+    "manifest_version": 2
+  }
