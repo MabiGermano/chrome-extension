@@ -4,23 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>There's a pic for you!</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+    <title>Search</title>
+    <script src="views/components.js"></script>
+    <script src="views/update.js"></script>
+
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="styles-temp.css">
 </head>
 
 <body>
     <main>
-        <div>
-            <h1>Hallo!!</h1>
+        <div id="window-bar">
+            <ul class="window-action">
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
-        <div class="jokes-section">
-            
-        </div>
-        <div class="search-section">
-            <form>
-                <input type="text" id="search" autocomplete="off">
-                <button type="submit">Search</button>
-            </form>
+        <div id="window-body">
+            <div class="title">
+                <h1></h1>
+            </div>
+            <div class="jokes-section">
+            </div>
+            <div class="search-section">
+                <form>
+                    <input type="text" id="search" placeholder="Search..." autocomplete="off">
+                    <button type="submit">
+                        <span class="material-symbols-outlined">
+                            search
+                        </span>
+                    </button>
+                </form>
+            </div>
         </div>
     </main>
     <script src="main.js"></script>

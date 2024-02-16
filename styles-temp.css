@@ -1,0 +1,86 @@
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body,
+input {
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+input {
+    font-size: 1.2rem;
+}
+
+main {
+    width: 30rem;
+    height: max-content;
+    font-size: 1.2rem;
+    display: grid;
+    grid-template-rows: 0.5fr 9.5fr;
+    background-color: white;
+    border: 2px solid #c05bb7;
+    position: relative;
+    overflow: hidden;
+}
+
+main div#window-bar {
+    border-bottom: 2px solid #c05bb7;
+}
+
+main div#window-body {
+    padding: 1.2rem;
+}
+
+.title>h1,
+h3 {
+    margin: 0;
+}
+
+main ul.window-action {
+    width: 10%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+main ul.window-action>li {
+    list-style: circle;
+    font-size: 24px;
+    color: #c05bb7;
+}
+
+div.search-section input {
+    height: 3rem;
+    border: .5px solid #dbdbdb;
+    padding-left: 1rem;
+    border-radius: 2.5rem
+}
+
+div.search-section button {
+    height: 4rem;
+    width: 4rem;
+    border: .5px solid #dbdbdb;
+    border-radius: 50%;
+    background-color: #a03f79;
+    color: white;
+    justify-self: center;
+}
+
+div.search-section button>span {
+    font-size: 32px;
+}
+
+div.search-section form {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
