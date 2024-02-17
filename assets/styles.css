@@ -18,8 +18,10 @@ input {
 }
 
 input {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    color: #2e2e2e;
 }
+
 main {
     width: fit-content;
     height: max-content;
@@ -46,6 +48,7 @@ section div#window-bar {
 
 section div#window-body {
     padding: 1.2rem;
+    display: grid;
 }
 
 .title>h1,
@@ -81,6 +84,12 @@ div.search-section button {
     background-color: #a03f79;
     color: white;
     justify-self: center;
+    transition: background-color 0.3s;
+}
+
+div.search-section button:hover {
+    background-color: #d061a4;
+    transition: background-color 0.3s;
 }
 
 div.search-section button>span {
@@ -100,9 +109,15 @@ nav a div {
     overflow: hidden;
 
     background-color: #a03f79; 
+    transition: background-color 0.3s;
 }
+
+nav a div:hover {
+    background-color: #d061a4; 
+}
+
 nav a:link, nav a:visited, nav a:hover {
-    color:black;
+    color:#FFF;
     font-weight: 500;
     text-decoration: none;
 }
@@ -111,4 +126,5 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     height: 25rem;
+    margin-left: 0.4rem;
 }

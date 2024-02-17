@@ -1,13 +1,11 @@
 window.onload = async () => {
     setRandomBackground();
 
+    const mostVisitedURLs = await chrome.topSites.get();
     const currentTime = new Date();
     titleComponent.content = wellcomePhrases(currentTime);
-    updateContent(titleComponent);
-   
-    const mostVisitedURLs = await chrome.topSites.get();
+    updateContent(titleComponent);   
 
-    console.log(mostVisitedURLs);
     for (let index = 0; index < 5; index++) {
         const metadata = mostVisitedURLs[index];
         appendContent(topSitesComponent.element, topSiteItemComponent.element(metadata));
@@ -37,6 +35,7 @@ async function getRadomJoke() {
 }
 
 function initSearch() {
+    searchInputComponent.element().focus();
     searchComponent.element().addEventListener('submit', (event) => {
         event.preventDefault();
         const input = searchInputComponent.element();

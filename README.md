@@ -21,8 +21,7 @@ Transform your Chrome new tab experience with a dynamic and functional interface
 4. Click on "Load unpacked" and select the directory where you cloned/downloaded this repository.
 5. Now you can open a new tab and and experience it for yourself!
 
-## Screenshots/Demo
-> WIP
+![Demo video](assets/demo-video.gif)
 
 ## Contributing
 Did you miss something? Feel free to submit a PR containing the following description template:
