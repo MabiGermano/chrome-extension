@@ -6,17 +6,29 @@
   "permissions": [
     "activeTab",
     "storage",
-    "topSites"
+    "topSites",
+    "favicon"
   ],
   "chrome_url_overrides": {
     "newtab": "index.html"
   },
+  "host_permissions": [
+    "chrome://favicon2/*"
+  ],
   "action": {
     "default_title": "Click Me",
     "default_popup": "popup.html"
   },
+  "web_accessible_resources": [
+    {
+      "resources": ["_favicon/*"],
+      "matches": ["<all_urls>"],
+      "extension_ids": ["*"]
+    }
+  ],
   "content_security_policy": {
-    "extension_pages": "script-src 'self' 'wasm-unsafe-eval' 'inline-speculation-rules'; object-src 'self'; "
+    "extension_pages": "script-src 'self'; object-src 'self'; "
   },
   "manifest_version": 3
+
 }

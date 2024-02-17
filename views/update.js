@@ -3,4 +3,6 @@ function updateContent(component) {
     element().innerHTML = content;
 }
 
-
+function appendContent(parentElemet, element) {
+    parentElemet().append(element);
+}

@@ -20,10 +20,17 @@ input {
 input {
     font-size: 1.2rem;
 }
-
 main {
-    width: 30rem;
+    width: fit-content;
     height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main > section {
+    width: 30rem;
+    height:25rem;
     font-size: 1.2rem;
     display: grid;
     grid-template-rows: 0.5fr 9.5fr;
@@ -33,11 +40,11 @@ main {
     overflow: hidden;
 }
 
-main div#window-bar {
+section div#window-bar {
     border-bottom: 2px solid #c05bb7;
 }
 
-main div#window-body {
+section div#window-body {
     padding: 1.2rem;
 }
 
@@ -46,14 +53,14 @@ h3 {
     margin: 0;
 }
 
-main ul.window-action {
+section ul.window-action {
     width: 10%;
     margin: 0;
     display: flex;
     justify-content: space-between;
 }
 
-main ul.window-action>li {
+section ul.window-action>li {
     list-style: circle;
     font-size: 24px;
     color: #c05bb7;
@@ -83,4 +90,25 @@ div.search-section button>span {
 div.search-section form {
     display: grid;
     grid-template-rows: 1fr 1fr;
+}
+
+nav a div {
+    width: 3.2rem;
+    height: 3.2rem;
+    padding: 0.8rem;
+    text-align: center;
+    overflow: hidden;
+
+    background-color: #a03f79; 
+}
+nav a:link, nav a:visited, nav a:hover {
+    color:black;
+    font-weight: 500;
+    text-decoration: none;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25rem;
 }

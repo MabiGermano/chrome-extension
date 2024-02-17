@@ -1,16 +1,22 @@
 window.onload = async () => {
+    setRandomBackground();
+
     const currentTime = new Date();
     titleComponent.content = wellcomePhrases(currentTime);
     updateContent(titleComponent);
    
     const mostVisitedURLs = await chrome.topSites.get();
+
+    console.log(mostVisitedURLs);
+    for (let index = 0; index < 5; index++) {
+        const metadata = mostVisitedURLs[index];
+        appendContent(topSitesComponent.element, topSiteItemComponent.element(metadata));
+    }
    
-    setRandomBackground();
     getRadomJoke().then(joke => {
         jokeCompoenent.content = `<p>${joke.setup} <i>${joke.delivery}</i></p>`
         updateContent(jokeCompoenent);
     });
-    
     initSearch();
 };
 

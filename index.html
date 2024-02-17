@@ -19,30 +19,34 @@
 
 <body>
     <main>
-        <div id="window-bar">
-            <ul class="window-action">
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
-        <div id="window-body">
-            <div class="title">
-                <h1></h1>
+        <section>
+            <div id="window-bar">
+                <ul class="window-action">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
-            <div class="jokes-section">
+            <div id="window-body">
+                <div class="title">
+                    <h1></h1>
+                </div>
+                <div class="jokes-section">
+                </div>
+                <div class="search-section">
+                    <form>
+                        <input type="text" id="search" placeholder="Search..." autocomplete="off">
+                        <button type="submit">
+                            <span class="material-symbols-outlined">
+                                search
+                            </span>
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="search-section">
-                <form>
-                    <input type="text" id="search" placeholder="Search..." autocomplete="off">
-                    <button type="submit">
-                        <span class="material-symbols-outlined">
-                            search
-                        </span>
-                    </button>
-                </form>
-            </div>
-        </div>
+        </section>
+        <nav>
+        </nav>
     </main>
     <script src="main.js"></script>
 </body>
